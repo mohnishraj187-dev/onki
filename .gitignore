@@ -1,0 +1,809 @@
+# ============================================================
+# ONCOMORPH4D - COMPREHENSIVE GITIGNORE
+# ============================================================
+
+
+# ============================================================
+# PYTHON
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.pyo
+*.pyd
+
+.python-version
+
+# Python build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ============================================================
+# VIRTUAL ENVIRONMENTS
+# ============================================================
+
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# Virtualenv files
+pip-selfcheck.json
+
+
+# ============================================================
+# ENVIRONMENT / SECRETS
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+*.env
+
+# API keys / credentials
+secrets/
+secret/
+credentials/
+*.pem
+*.key
+*.crt
+
+# Local configuration
+config.local.*
+settings.local.*
+
+
+# ============================================================
+# FASTAPI / UVICORN
+# ============================================================
+
+*.log
+uvicorn.log
+
+# Runtime files
+*.pid
+*.sock
+
+
+# ============================================================
+# NODE / REACT / VITE
+# ============================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.yarn/
+.pnpm-store/
+
+# Vite
+.vite/
+dist/
+
+# React build
+build/
+
+# Next.js (if ever used)
+.next/
+out/
+
+# Parcel
+.parcel-cache/
+
+# Turbo
+.turbo/
+
+# TypeScript
+*.tsbuildinfo
+
+
+# ============================================================
+# FRONTEND ENVIRONMENT FILES
+# ============================================================
+
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# If frontend folder is named differently
+client/.env
+client/.env.*
+!client/.env.example
+
+
+# ============================================================
+# MRI / MEDICAL DATA
+# ============================================================
+
+# NIfTI MRI files
+*.nii
+*.nii.gz
+
+# Common medical imaging formats
+*.dcm
+*.dicom
+*.mha
+*.mhd
+*.nrrd
+*.nhdr
+*.img
+*.hdr
+
+# Raw medical data
+*.raw
+
+# DICOM folders
+DICOM/
+dicom/
+DICOMDIR
+
+# Patient datasets
+data/
+dataset/
+datasets/
+medical_data/
+patient_data/
+patient_data_local/
+
+# MU-Glioma dataset
+MU-Glioma-Post/
+data/MU-Glioma-Post/
+
+# Patient folders
+PatientID_*/
+*/PatientID_*/
+
+
+# ============================================================
+# GENERATED MRI OUTPUTS
+# ============================================================
+
+# Generated masks
+predictions/
+prediction/
+predicted_masks/
+masks_generated/
+
+*.mask
+*_mask.nii
+*_mask.nii.gz
+*_tumorMask.nii
+*_tumorMask.nii.gz
+
+Predicted_*.nii
+Predicted_*.nii.gz
+
+# Generated segmentation outputs
+segmentation_output/
+segmentation_outputs/
+
+# Temporary MRI processing
+tmp/
+temp/
+temporary/
+processing/
+processed/
+
+
+# ============================================================
+# 3D MODELS
+# ============================================================
+
+# Generated GLB files
+*.glb
+*.gltf
+*.obj
+*.stl
+*.ply
+*.fbx
+*.blend
+
+# Generated brain models
+*_brain.glb
+*_brain.gltf
+
+# Generated tumour models
+*_tumor.glb
+*_tumour.glb
+*_tumor.gltf
+*_tumour.gltf
+
+# OncoMorph generated models
+backend/data/*.glb
+backend/data/*.gltf
+backend/models/*.glb
+backend/models/*.gltf
+
+# Mesh caches
+mesh_cache/
+meshes/
+generated_meshes/
+
+
+# ============================================================
+# MACHINE LEARNING MODELS / WEIGHTS
+# ============================================================
+
+# PyTorch
+*.pth
+*.pt
+*.pth.tar
+*.ckpt
+
+# TensorFlow / Keras
+*.h5
+*.hdf5
+*.keras
+
+# ONNX
+*.onnx
+
+# TorchScript
+*.torchscript
+
+# Pickle models
+*.pkl
+*.pickle
+
+# Scikit-learn
+*.joblib
+
+# Model directories
+checkpoints/
+checkpoint/
+weights/
+models/
+trained_models/
+training_output/
+runs/
+wandb/
+mlruns/
+
+# Specific project checkpoint
+epoch_*_model.pth
+
+
+# ============================================================
+# TRAINING OUTPUTS
+# ============================================================
+
+training/
+training_logs/
+training_results/
+experiments/
+experiment/
+outputs/
+results/
+
+# TensorBoard
+logs/
+runs/
+
+events.out.tfevents.*
+
+
+# ============================================================
+# PYTORCH / CUDA CACHE
+# ============================================================
+
+*.pt
+*.pth
+
+torch_cache/
+torch_extensions/
+
+# CUDA compilation/cache
+*.cubin
+*.fatbin
+
+
+# ============================================================
+# MATPLOTLIB
+# ============================================================
+
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# NOTE:
+# Remove these lines if you want to commit screenshots,
+# plots, diagrams, or frontend assets.
+
+# Matplotlib cache
+.matplotlib/
+
+
+# ============================================================
+# GENERATED SLICE IMAGES
+# ============================================================
+
+slices/
+slice/
+slice_images/
+generated_slices/
+plots/
+generated_plots/
+
+
+# ============================================================
+# REPORTS / GENERATED FILES
+# ============================================================
+
+generated_reports/
+reports_generated/
+clinical_reports/
+*.pdf
+*.docx
+*.xlsx
+*.csv
+
+# Temporary report files
+*.tmp
+*.temp
+
+
+# ============================================================
+# DATABASE
+# ============================================================
+
+*.db
+*.sqlite
+*.sqlite3
+
+*.sqlitedb
+
+# Local database folders
+database/
+db/
+local_db/
+
+
+# ============================================================
+# IDE - VISUAL STUDIO CODE
+# ============================================================
+
+.vscode/
+*.code-workspace
+
+# Keep shared VS Code settings if desired
+!.vscode/settings.json
+
+# But ignore machine-specific files
+.vscode/*.local
+.vscode/launch.json
+.vscode/tasks.json
+
+
+# ============================================================
+# VISUAL STUDIO
+# ============================================================
+
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build folders
+[Bb]in/
+[Oo]bj/
+
+
+# ============================================================
+# PYCHARM / JETBRAINS
+# ============================================================
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+
+# ============================================================
+# WINDOWS
+# ============================================================
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+Desktop.ini
+
+$RECYCLE.BIN/
+
+*.lnk
+
+# Windows installer junk
+*.cab
+
+
+# ============================================================
+# MACOS
+# ============================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+._*
+
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+.VolumeIcon.icns
+
+
+# ============================================================
+# LINUX
+# ============================================================
+
+*~
+.directory
+
+.nfs*
+
+
+# ============================================================
+# TEMPORARY / BACKUP FILES
+# ============================================================
+
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*.swo
+*.tmp
+*.temp
+*.cache
+
+# Editor temporary files
+*.swp
+*.swo
+
+# Python temporary
+*.pyc
+
+
+# ============================================================
+# ZIP / ARCHIVES
+# ============================================================
+
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+
+
+# ============================================================
+# LARGE FILES
+# ============================================================
+
+# Generic large binaries
+*.bin
+*.dat
+
+# Raw model/data files
+*.raw
+
+
+# ============================================================
+# WEB / FRONTEND CACHE
+# ============================================================
+
+.cache/
+.cache-loader/
+.sass-cache/
+.stylelintcache
+
+coverage/
+
+# Browser automation
+playwright-report/
+test-results/
+blob-report/
+
+
+# ============================================================
+# TESTING
+# ============================================================
+
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+nosetests.xml
+
+junit.xml
+
+
+# ============================================================
+# DOCUMENTATION BUILD
+# ============================================================
+
+docs/_build/
+site/
+
+
+# ============================================================
+# LOCAL DEVELOPMENT
+# ============================================================
+
+.local/
+local/
+development/
+dev_data/
+
+# Runtime generated files
+runtime/
+runtime_data/
+
+
+# ============================================================
+# BACKEND GENERATED FILES
+# ============================================================
+
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+
+backend/venv/
+backend/.venv/
+
+backend/data/
+backend/tmp/
+backend/temp/
+backend/outputs/
+backend/predictions/
+backend/checkpoints/
+
+
+# ============================================================
+# FRONTEND GENERATED FILES
+# ============================================================
+
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/coverage/
+
+client/node_modules/
+client/dist/
+client/build/
+
+
+# ============================================================
+# REACT / NPM LOCK TEMP FILES
+# ============================================================
+
+.npmrc.local
+.yarnrc.local
+
+
+# ============================================================
+# SECRET / PRIVATE FILE TYPES
+# ============================================================
+
+*.secret
+*.secrets
+*.credentials
+
+# SSH
+id_rsa
+id_rsa.pub
+id_dsa
+id_ecdsa
+id_ed25519
+
+# Certificates
+*.p12
+*.pfx
+*.jks
+
+
+# ============================================================
+# API / SERVICE CONFIGURATION
+# ============================================================
+
+service-account.json
+firebase-adminsdk*.json
+google-services.json
+
+# OpenAI / other API keys
+openai_key.txt
+api_key.txt
+apikey.txt
+
+
+# ============================================================
+# DOCKER
+# ============================================================
+
+.docker/
+docker-data/
+
+# Docker override files containing local config
+docker-compose.override.yml
+
+
+# ============================================================
+# BACKEND SERVER CACHE
+# ============================================================
+
+__pycache__/
+*.pid
+*.log
+
+# FastAPI generated/local files
+uploads/
+uploaded_files/
+generated/
+generated_files/
+
+
+# ============================================================
+# LOCAL MRI UPLOADS
+# ============================================================
+
+uploads/
+uploaded/
+uploaded_mri/
+mri_uploads/
+
+# Patient-identifiable/local scans
+patients/
+patients_local/
+
+
+# ============================================================
+# MODEL INFERENCE CACHE
+# ============================================================
+
+inference_cache/
+inference/
+model_cache/
+prediction_cache/
+
+
+# ============================================================
+# OS / SHELL HISTORY
+# ============================================================
+
+.python_history
+.python_history.txt
+
+.bash_history
+.zsh_history
+
+
+# ============================================================
+# TERMINAL / TOOL CACHE
+# ============================================================
+
+.pyright/
+.pyre/
+.pytype/
+
+
+# ============================================================
+# GENERATED JSON
+# ============================================================
+
+# Ignore generated API responses/results
+generated_json/
+api_output/
+
+# If you need to commit specific JSON files, use ! rules.
+
+
+# ============================================================
+# LOCAL CONFIG FILES
+# ============================================================
+
+*.local
+*.local.json
+*.local.yaml
+*.local.yml
+
+
+# ============================================================
+# BACKUP PROJECT COPIES
+# ============================================================
+
+*_backup/
+*_old/
+*_copy/
+backup/
+backups/
+
+
+# ============================================================
+# ONCOMORPH4D SPECIFIC
+# ============================================================
+
+# Uploaded MRI scans
+OncoMorph4D/data/
+OncoMorph4D/backend/data/
+
+# Generated 3D reconstructions
+OncoMorph4D/backend/data/*.glb
+OncoMorph4D/backend/data/*.gltf
+
+# Generated tumor masks
+OncoMorph4D/backend/data/*tumor*
+OncoMorph4D/backend/data/*tumour*
+OncoMorph4D/backend/data/*mask*
+
+# Model checkpoints
+OncoMorph4D/backend/checkpoints/
+
+# Local virtual environment
+OncoMorph4D/backend/venv/
+
+# Frontend dependencies
+OncoMorph4D/frontend/node_modules/
+
+# Frontend build
+OncoMorph4D/frontend/dist/
+
+
+# ============================================================
+# KEEP THESE IMPORTANT FILES
+# ============================================================
+
+# Environment template
+!.env.example
+
+# Documentation
+!README.md
+
+# Git configuration
+!.gitignore
+
+# Python requirements
+!requirements.txt
+
+# Node package files
+!package.json
+!package-lock.json
+
+# ============================================================
+# END
+# ============================================================

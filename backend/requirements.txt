@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+numpy
+nibabel
+matplotlib
+scipy
+scikit-image
+trimesh
+torch
