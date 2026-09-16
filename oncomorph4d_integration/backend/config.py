@@ -23,7 +23,7 @@ CHECKPOINT_DIR = BASE_DIR / "models"
 # ---------------------------------------------------------
 
 MODEL_CHECKPOINT = CHECKPOINT_DIR / "glioma_segmentation_best_model.pt"
-MULTICLASS_MODEL_CHECKPOINT = Path("/home/mohnish/Projects/mu-glioma-ai/runs/multiclass_v1/best_model.pt")
+MULTICLASS_MODEL_CHECKPOINT = BASE_DIR.parent / "model" / "best_model.pt"
 
 
 # ---------------------------------------------------------

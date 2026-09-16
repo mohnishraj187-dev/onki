@@ -1,0 +1,5 @@
+numpy
+nibabel
+torch
+monai
+scipy
