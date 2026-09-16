@@ -5,7 +5,7 @@ files are intentionally unchanged.
 
 Contents:
 
-- `model/best_model.pt`: trained multiclass SegResNet checkpoint
+- `model/best_validation_model.pt`: best-validation multiclass SegResNet checkpoint used by inference
 - `backend/segmentation_service.py`: inference and volume measurements
 - `backend/mesh_service.py`: registered brain/tumor GLB generation
 - `backend/config.py`: model and storage configuration
@@ -41,5 +41,5 @@ python inference.py \
   --output-json outputs/measurements.json
 ```
 
-The checkpoint is loaded from `model/best_model.pt`; no machine-specific
+The checkpoint is loaded from `model/best_validation_model.pt`; no machine-specific
 absolute path is required.
